@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> betdiceGame</title>
+</head>
+<body>
+<h1>here is the Bet Dice Game! </h1>
+<p>Choose a number you want to bet:</p>
+<form action="bet/" method="post">
+	{% csrf_token %}
+	<input type = "number" name = "betnumber" min='0' max='100'><br>
+	<input type = "submit" value = "BET!">
+</form>
+
+
+
+</body>
+</html>
