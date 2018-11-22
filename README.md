@@ -1,8 +1,7 @@
 
 ## This is a bet dice game website!
 It uses eos blockchain to generate dice result.
-However, considering the nature of blockchain, it is truely hard to get fullu random result.
-Thus the result is not fully random. 
+However, considering the nature of blockchain, it is truely hard to get fully random result.
 Notice: 
 1. you need  to create a eos account first, named getnumber to make it work!
 2. make sure the wallet is unlocked. if locked, it will lead to exceptions.
