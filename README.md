@@ -5,7 +5,7 @@ However, considering the nature of blockchain, it is truely hard to get fully ra
 Notice: 
 1. you need  to create a eos account first, named getnumber to make it work!
 2. make sure the wallet is unlocked. if locked, it will lead to exceptions.
-3. remember to push the contract using: cleos set contract getnumber <yourroute>/contracts/getnumber -p getnumber@active
+3. remember to push the contract using: cleos set contract getnumber /your_route_to_contracts/contracts/getnumber -p getnumber@active
 4. then use : python3 manager.py runserver 0.0.0.0:8000   to start the server
 5. go to <ip addr>:8000/betdiceApp to start!
 6. press BET! button to see result and BET AGAIN! button to jump back
