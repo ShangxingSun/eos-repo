@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title> betdiceGame</title>
-</head>
-<body>
-<h1>here is the Bet Dice Game! </h1>
-<p>Choose a number you want to bet:</p>
-<form action="bet/" method="post">
-	{% csrf_token %}
-	<input type = "number" name = "betnumber" min='0' max='100'><br>
-	<input type = "submit" value = "BET!">
-</form>
+	<head>
+		<title> betdiceGame</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'betdiceApp/style.css' %}">
+	</head>
+	<body>
+		<h1>here is the Bet Dice Game! </h1>
+		<p>Choose a number you want to bet:</p>
+		<form action="bet/" method="post">
+			{% csrf_token %}
+			<div class="slidecontainer">
+				<input name="betnumber" type="range" min="1" max="100" value="50" class="slider" id="myRange">
+			</div>
+			<p>the number you bet is: <span id="demo"></span></p>
+			<input type = "submit" value = "BET!">
+		</form>
 
 
 
-</body>
+	</body>
+	<script src="{% static 'betdiceApp/bdapp.js' %}"></script>
 </html>
