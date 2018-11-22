@@ -10,6 +10,7 @@ def index(request):
 
 def bet(request):
     betnumber = request.POST['betnumber']
+    #this use subprocess to run cloes command and get the return
     cleosAlisa = 'sudo docker exec -it eosio /opt/eosio/bin/cleos --url http://127.0.0.1:7777 --wallet-url http://127.0.0.1:5555'
     command = cleosAlisa + " push action getnumber hi \'[\"getnumber\"]\' -p getnumber@active"
     try:
@@ -20,6 +21,7 @@ def bet(request):
         print(out_bytes)
         print(code)
     outnumber = out_bytes.decode('utf-8')
+    #the result is a string. the only things we need is the number inside it
     randomnumber = int(outnumber[outnumber.find('>>')+3:outnumber.find('>>')+5])
     print(randomnumber)
     if(int(betnumber)<randomnumber):
